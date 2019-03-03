@@ -1,0 +1,17 @@
+body{
+    margin:0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    background: #00BCD4;
+    color: white;
+    font-weight: bold;
+}
+
+.wrapper{
+    margin: 10px 20px 0px 20px;   
+}

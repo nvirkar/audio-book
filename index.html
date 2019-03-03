@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Read Along book </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <div class="header">
+        Read Along Audio Book
+    </div>
+
+    <div class="wrapper">
+        <textarea rows="20" cols="160" placeholder="Enter your text here" id="content"></textarea>
+
+
+        <div> <button class="btn">Click here</button></div>
+
+    </div>
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/index.js"></script>
 <script>
-$(document).ready(function(){
-    var script = new myscript();
-    script.init();
-})
+    $(document).ready(function () {
+        var script = new myscript();
+        script.init();
+    })
 </script>
+
 </html>

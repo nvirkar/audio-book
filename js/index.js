@@ -1,13 +1,44 @@
-var myscript = function(){
+var myscript = function () {
 
-    var start = function(){
-        alert('ready');
+    function speak(text, callback) {
+        var u = new SpeechSynthesisUtterance();
+        u.text = text;
+        u.lang = 'en-US';
+
+        u.onend = function () {
+            if (callback) {
+                callback();
+            }
+        };
+
+        u.onerror = function (e) {
+            if (callback) {
+                callback(e);
+            }
+        };
+
+        speechSynthesis.speak(u);
     }
 
-    var init= function(){
+    var start = function () {
+        console.log('ready')
+    }
+
+
+
+    var _events = function () {
+        $('.btn').off('click').on('click', function () {
+            console.log('clicked');
+            var data = $('#content').val();
+            speak(data);
+        })
+    }
+
+    var init = function () {
+        _events();
         start();
     }
     return {
-        init:init
+        init: init
     }
 }
