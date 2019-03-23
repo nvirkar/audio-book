@@ -15,3 +15,23 @@ body{
 .wrapper{
     margin: 10px 20px 0px 20px;   
 }
+
+.content{
+    margin: 12px 10px;
+    border: 1px solid;
+    padding: 20px;
+    height: 60vh;
+    overflow-y: scroll;
+    /* background: grey;
+    color: white; */
+}
+
+.audio-container{
+    margin-top:10px;
+}
+
+.active{
+    background-color: yellow;
+}
+
+::-webkit-scrollbar { width: 0 !important }

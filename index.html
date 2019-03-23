@@ -13,16 +13,28 @@
     <div class="header">
         Read Along Audio Book
     </div>
-
     <div class="wrapper">
-        <textarea rows="20" cols="160" placeholder="Enter your text here" id="content"></textarea>
+        <!-- <textarea rows="20" cols="160" placeholder="Enter your text here" id="content"></textarea>
+        <div> <button class="btn">Click here</button></div> -->
+        <div>
+            Note: please select the excel file first before playing the audio
+        </div>
+        <input type="file" id="my_file_input" />
 
+        <div class="audio-container">
+            <audio controls id='ac'>
+                <source src="assets/audio.mp3">
+            </audio>
+        </div>
+        <div class="content">
+        </div>
+        <!-- <div id='my_file_output'></div> -->
 
-        <div> <button class="btn">Click here</button></div>
 
     </div>
 </body>
 <script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.js"></script>
 <script src="js/index.js"></script>
 <script>
     $(document).ready(function () {
